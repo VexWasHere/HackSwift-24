@@ -13,7 +13,7 @@
 }
 body {
     height: 125vh;
-    background: linear-gradient(to bottom right, purple, yellow);
+    background: linear-gradient(to bottom right, #8216FF, #F2BB05);
     background-size: cover;
     font-family: sans-serif;
     margin-top: 80px;
@@ -92,13 +92,21 @@ header li .homeIcon {
 /* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
-  to {opacity: 1;}
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+#blog_link {
+  text-decoration: none;
+  color: #4ECDC4;
+}
+
     </style>
   </head>
   <body>
@@ -143,8 +151,9 @@ header li .homeIcon {
         </footer>
         </div>
         <div id="Health" class="tabcontent hide">
-          <h1>A healthy diet leads to a healthy mind...</h1>
-          <h2>View these popular places</h2>
+          <h1>Browse to learn more about fitness</h1>
+          <h2>Reccommended:</h2>
+          <a id="blog_link" href="fitness_blog_1.html">Kickstart Your Fitness Journey: A Beginner's Guide to Exercise</a>
         </div>
         <div id="Mood" class="tabcontent hide">
           <h1 id="moodQuestion">How have you been feeling today?</h1>
@@ -155,7 +164,10 @@ header li .homeIcon {
           <h2 id="emotion_reader"></h2>
         </div>
         <div id="Quotes" class="tabcontent hide">
-          <h1 id="random_quotes"></h1>
+          <section id="quotes">
+            <h1>Daily Motivational Quote:</h1>
+            <i><h3 id="quote"></h3></i>
+          </section>
         </div>
         <div id="Settings" class="tabcontent hide">Settings content is not avaliable right now.</div>  
     </main>
@@ -172,12 +184,26 @@ header li .homeIcon {
          tabContainers[idx].classList.remove('hide');
          e.target.classList.add('active');
       };
-      random_quotes = document.getElementById('random_quotes');
-      random_quotes.innerHTML = "Nuh uh -Rosa Parks"
 
-      emotion = document.getElementsByClassName('emotion_btn');
+      var random_quote = document.getElementById('quote');
 
-      emotion_reader = document.getElementById('emotion_reader').value;
+      const QUOTES = [
+  { author: "Confucius", quote: "We have two lives, and the second begins when we realize we only have one." },
+  { author: "Eleanor Roosevelt", quote: "No one can make you feel inferior without your consent." },
+  { author: "Nelson Mandela", quote: "A good head and a good heart are always a formidable combination." },
+  { author: "Maya Angelou", quote: "If you don't like something, change it. If you can't change it, change your attitude." },
+];
+
+function getRandomQuote() {
+  const numItems = QUOTES.length;
+  let randomIndex = Math.floor(Math.random() * numItems);
+  return QUOTES[randomIndex];
+}
+
+const quoteElement = document.getElementById('quote');
+const randomQuote = getRandomQuote();
+
+quoteElement.innerHTML = `"${randomQuote.quote}" — ${randomQuote.author}`;
 </script>
   </body>
 </html>
