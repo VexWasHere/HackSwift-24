@@ -4,14 +4,13 @@
 
 ### Added or Changed
 - Added this changelog :)
-- Fixed ui in index.html
-- Created github pages for repo
+- Fixed UI in index.html
+- Created GitHub pages for repo
 
 ### Removed
 
 - Some unwanted code for js that was slowing the website down
 
 ### Websites
-- The website is being hosted at [link]([https://www.example.com/my%20great%20page](https://ef165915-60b1-4aa1-af9b-d34a4096cf53-00-16l2tzxbotks.kirk.replit.dev/))
-
-<a href="https://ef165915-60b1-4aa1-af9b-d34a4096cf53-00-16l2tzxbotks.kirk.replit.dev/">link</a>
+- The website is being hosted on <a href="VexWasHere.github.io/HackSwift-24">GitHub pages</a>
+- If the website for GitHub pages is having troubles, it is also hosted on <a href="https://ef165915-60b1-4aa1-af9b-d34a4096cf53-00-16l2tzxbotks.kirk.replit.dev/">Replit</a>
