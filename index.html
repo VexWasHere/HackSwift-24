@@ -116,7 +116,6 @@ header li .homeIcon {
               <li><a id="homeTab" onclick="showContent('Home', event)"><h1 class="homeIcon">HackSwift '24</h1></a></li>
                 <li><a id="homeTab" onclick="showContent('Home', event)">Home</a></li>
                 <li><a id="healthTab" onclick="showContent('Health', event)">Health</a></li>
-                <li><a id="moodTab" onclick="showContent('Mood', event)">Mood</a></li>
                 <li><a id="quotesTab" onclick="showContent('Quotes', event)">Quotes</a></li>
                 <li><a id="settingsTab" onclick="showContent('Settings', event)">Settings</a></li>
             </ul>
@@ -155,14 +154,6 @@ header li .homeIcon {
           <h2>Reccommended:</h2>
           <a id="blog_link" href="fitness_blog_1.html">Kickstart Your Fitness Journey: A Beginner's Guide to Exercise</a>
         </div>
-        <div id="Mood" class="tabcontent hide">
-          <h1 id="moodQuestion">How have you been feeling today?</h1>
-          <button class="emotion_btn" id="happy">Happy</button>
-          <button class="emotion_btn" id="sad">Sad</button>
-          <button class="emotion_btn" id="anxious">Anxious</button>
-          <button class="emotion_btn" id="angry">Angry</button>
-          <h2 id="emotion_reader"></h2>
-        </div>
         <div id="Quotes" class="tabcontent hide">
           <section id="quotes">
             <h1>Daily Motivational Quote:</h1>
@@ -173,7 +164,7 @@ header li .homeIcon {
     </main>
     <script>
       function showContent(tabId, e) {
-         const tabs = ['Home','Health','Mood','Quotes','Settings'];
+         const tabs = ['Home','Health','Quotes','Settings'];
          const tabContainers = Array.from(document.querySelectorAll('.tabcontent'));
          const btns = Array.from(document.querySelectorAll('nav ul button'));
 
